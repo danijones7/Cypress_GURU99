@@ -134,5 +134,5 @@ support/
 1-getting-started/
 2-advanced-examples/
 
-.cypress.config.js
+cypress.config.js
 
