@@ -86,45 +86,45 @@ describe('Agile Project', () => {
 
     })
 
-    // it('Reset button', () => {
-    //     cy.get(':nth-child(1) > :nth-child(2) > input')
-    //         .type('1303')
-    //     cy.get(':nth-child(2) > :nth-child(2) > input')
-    //         .type('Guru99')
-    //     cy.get('[type="reset"]').click()
-    //     // cy.get('[type="submit"]').click() //  не отловить алерт 
+    it('Reset button', () => {
+        cy.get(':nth-child(1) > :nth-child(2) > input')
+            .type('1303')
+        cy.get(':nth-child(2) > :nth-child(2) > input')
+            .type('Guru99')
+        cy.get('[type="reset"]').click()
+        // cy.get('[type="submit"]').click() //  не отловить алерт 
 
-    // })
+    })
 
-    // it('Checks the links', () => {
-    //     cy.get(':nth-child(1) > :nth-child(2) > input')
-    //         .type('1303')
-    //     cy.get(':nth-child(2) > :nth-child(2) > input')
-    //         .type('Guru99')
-    //     cy.get('[type="submit"]').click()
-    //     // cy.get('.nav > :nth-child(8) > a').click()   // так лучше из cypress не копировать, непонтно потом 
-    //     cy.contains('Insurance Project').click()
-    //     cy.url('https://demo.guru99.com/insurance/v1/index.php')
-    //     cy.contains('Agile Project').click()
-    //     cy.url('https://demo.guru99.com/Agile_Project/Agi_V1/')
-    //     cy.contains('Bank Project').click()
-    //     cy.url('https://demo.guru99.com/V1/index.php')
-    //     cy.contains('Security Project').click()
-    //     cy.url('https://demo.guru99.com/Security/SEC_V1/index.php')
-    //     cy.contains('Telecom Project').click()
-    //     cy.url('https://demo.guru99.com/telecom/index.html')
-    //     cy.contains('Payment Gateway Project').click()
-    //     cy.url('https://demo.guru99.com/payment-gateway/index.php')
-    //     cy.contains('New Tours').click()
-    //     cy.url('https://demo.guru99.com/test/newtours/')
+    it('Checks the links', () => {
+        cy.get(':nth-child(1) > :nth-child(2) > input')
+            .type('1303')
+        cy.get(':nth-child(2) > :nth-child(2) > input')
+            .type('Guru99')
+        cy.get('[type="submit"]').click()
+        // cy.get('.nav > :nth-child(8) > a').click()   // так лучше из cypress не копировать, непонтно потом 
+        cy.contains('Insurance Project').click()
+        cy.url('https://demo.guru99.com/insurance/v1/index.php')
+        cy.contains('Agile Project').click()
+        cy.url('https://demo.guru99.com/Agile_Project/Agi_V1/')
+        cy.contains('Bank Project').click()
+        cy.url('https://demo.guru99.com/V1/index.php')
+        cy.contains('Security Project').click()
+        cy.url('https://demo.guru99.com/Security/SEC_V1/index.php')
+        cy.contains('Telecom Project').click()
+        cy.url('https://demo.guru99.com/telecom/index.html')
+        cy.contains('Payment Gateway Project').click()
+        cy.url('https://demo.guru99.com/payment-gateway/index.php')
+        cy.contains('New Tours').click()
+        cy.url('https://demo.guru99.com/test/newtours/')
 
-    // })
+    })
 
-    // it('Checks the dropdowns in nav', () => {
-    //     cy.get(':nth-child(1) > .dropdown-toggle').click()
-    //     // создать команду, и по ней проверять все дропдауны 
+    it('Checks the dropdowns in nav', () => {
+        cy.get(':nth-child(1) > .dropdown-toggle').click()
+        // создать команду, и по ней проверять все дропдауны 
 
-    // })
+    })
 
 });
 
