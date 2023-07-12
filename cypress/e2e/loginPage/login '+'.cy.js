@@ -78,7 +78,6 @@ describe('Agile Project', () => {
 
         cy.log('Subnav is shown correctly')
         cy.get('.orange > a')
-
             .should('be.visible')
             .and('contain', 'Customer')
             .and('have.css', 'margin-top', '0px')
