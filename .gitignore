@@ -135,4 +135,5 @@ support/
 2-advanced-examples/
 
 cypress.config.js
+spec.cy.js
 
