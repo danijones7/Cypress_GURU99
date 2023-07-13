@@ -24,3 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+
+Cypress.Commands.add('fillTheData', (object, data) => {
+    cy.get(object)
+        .type(data)
+});
+
+import "./CommandsTariffPlan";
+
