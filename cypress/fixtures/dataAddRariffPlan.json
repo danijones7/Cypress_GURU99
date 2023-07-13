@@ -1,74 +1,74 @@
 {
-    "objects": {
-        "monthlyRental": "#rental1",
-        "freeLocalMin": "#local_minutes",
-        "freeInterMin": "#inter_minutes",
-        "freeSMSPack": "#sms_pack",
-        "localPerMinCharges": "#minutes_charges",
-        "interPerMinCharges": "#inter_charges",
-        "SMSPerCharges": "#sms_charges"
-    },
-    "max": {
-        "monthlyRental": 99999,
-        "freeLocalMin": 99999,
-        "freeInterMin": 99999,
-        "freeSMSPack": 99999,
-        "localPerMinCharges": 999,
-        "interPerMinCharges": 999,
-        "SMSPerCharges": 999
-    },
-    "min": {
-        "monthlyRental": 0,
-        "freeLocalMin": 0,
-        "freeInterMin": 0,
-        "freeSMSPack": 0,
-        "localPerMinCharges": 0,
-        "interPerMinCharges": 0,
-        "SMSPerCharges": 0
-    },
-    "nom": {
-        "monthlyRental": 77777,
-        "freeLocalMin": 77777,
-        "freeInterMin": 77777,
-        "freeSMSPack": 77777,
-        "localPerMinCharges": 777,
-        "interPerMinCharges": 777,
-        "SMSPerCharges": 777
-    },
-    "maxPlus1": {
-        "monthlyRental": 100000,
-        "freeLocalMin": 100000,
-        "freeInterMin": 100000,
-        "freeSMSPack": 100000,
-        "localPerMinCharges": 1000,
-        "interPerMinCharges": 1000,
-        "SMSPerCharges": 1000
-    },
-    "specialCharacters": {
-        "monthlyRental": "/?!~",
-        "freeLocalMin": "@#$}",
-        "freeInterMin": "%^&{",
-        "freeSMSPack": "*():",
-        "localPerMinCharges": ",.|",
-        "interPerMinCharges": "+~`",
-        "SMSPerCharges": "><;"
-    },
-    "charactersABC": {
-        "monthlyRental": "abcde",
-        "freeLocalMin": "abcde",
-        "freeInterMin": "abcde",
-        "freeSMSPack": "abcde",
-        "localPerMinCharges": "abc",
-        "interPerMinCharges": "abc",
-        "SMSPerCharges": "abc"
-    },
-    "spaces": {
-        "monthlyRental": "     ",
-        "freeLocalMin": "     ",
-        "freeInterMin": "     ",
-        "freeSMSPack": "     ",
-        "localPerMinCharges": "   ",
-        "interPerMinCharges": "   ",
-        "SMSPerCharges": "   "
-    }
+  "objects": {
+    "monthlyRental": "#rental1",
+    "freeLocalMin": "#local_minutes",
+    "freeInterMin": "#inter_minutes",
+    "freeSMSPack": "#sms_pack",
+    "localPerMinCharges": "#minutes_charges",
+    "interPerMinCharges": "#inter_charges",
+    "SMSPerCharges": "#sms_charges"
+  },
+  "max": {
+    "monthlyRental": 99999,
+    "freeLocalMin": 99999,
+    "freeInterMin": 99999,
+    "freeSMSPack": 99999,
+    "localPerMinCharges": 999,
+    "interPerMinCharges": 999,
+    "SMSPerCharges": 999
+  },
+  "min": {
+    "monthlyRental": 0,
+    "freeLocalMin": 0,
+    "freeInterMin": 0,
+    "freeSMSPack": 0,
+    "localPerMinCharges": 0,
+    "interPerMinCharges": 0,
+    "SMSPerCharges": 0
+  },
+  "nom": {
+    "monthlyRental": 77777,
+    "freeLocalMin": 77777,
+    "freeInterMin": 77777,
+    "freeSMSPack": 77777,
+    "localPerMinCharges": 777,
+    "interPerMinCharges": 777,
+    "SMSPerCharges": 777
+  },
+  "maxPlus1": {
+    "monthlyRental": 100000,
+    "freeLocalMin": 100000,
+    "freeInterMin": 100000,
+    "freeSMSPack": 100000,
+    "localPerMinCharges": 1000,
+    "interPerMinCharges": 1000,
+    "SMSPerCharges": 1000
+  },
+  "specialCharacters": {
+    "monthlyRental": ">~}=.",
+    "freeLocalMin": "~=(``",
+    "freeInterMin": "-;)|%",
+    "freeSMSPack": ")?+=}",
+    "localPerMinCharges": "%`^",
+    "interPerMinCharges": "+=-",
+    "SMSPerCharges": "/>."
+  },
+  "charsABC": {
+    "monthlyRental": "abcde",
+    "freeLocalMin": "abcde",
+    "freeInterMin": "abcde",
+    "freeSMSPack": "abcde",
+    "localPerMinCharges": "abc",
+    "interPerMinCharges": "abc",
+    "SMSPerCharges": "abc"
+  },
+  "spaces": {
+    "monthlyRental": "     ",
+    "freeLocalMin": "     ",
+    "freeInterMin": "     ",
+    "freeSMSPack": "     ",
+    "localPerMinCharges": "   ",
+    "interPerMinCharges": "   ",
+    "SMSPerCharges": "   "
+  }
 }

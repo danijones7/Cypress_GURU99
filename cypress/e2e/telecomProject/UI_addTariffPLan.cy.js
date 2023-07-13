@@ -30,10 +30,10 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
             cy.get('.left > [href="#menu"]')
             .should('be.visible')
             .click()
-        
+        cy.log('Check backgrond color')
             cy.get('#menu')
             .should('have.css', 'background-color', 'rgb(37, 162, 195)')
-            
+        cy.log('Check Menu Links')
             cy.get('.links > :nth-child(1) > a')
             .contains('Home')
             .should('have.attr', 'href', 'index.html')
@@ -67,27 +67,28 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
     });
     
     it('Checks the TextFields', () => {
+    cy.log('Field - Monthly Rental')
         cy.get(':nth-child(1) > h3')
             .contains('Monthly Rental')
             .should('be.visible')
             .and('have.css', 'color', 'rgb(37, 162, 195)')
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
             .and('have.css', 'font-size', '18px');
-        
+    cy.log('Field - Free Local Minutes')
         cy.get(':nth-child(6) > h3')
             .contains('Free Local Minutes')
             .should('be.visible')
             .and('have.css', 'color', 'rgb(37, 162, 195)')
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
             .and('have.css', 'font-size', '18px');
-        
+    cy.log('Field - Free International Minutes')   
         cy.get(':nth-child(11) > h3')
             .contains('Free International Minutes')
             .should('be.visible')
             .and('have.css', 'color', 'rgb(37, 162, 195)')
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
             .and('have.css', 'font-size', '18px');
-        
+    cy.log('Field - Free SMS Pack')    
         cy.get(':nth-child(16) > h3')
             .contains('Free SMS Pack')
             .should('be.visible')
@@ -95,7 +96,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
             .and('have.css', 'font-size', '18px');
         
-        
+    cy.log('Field - Local Per Minutes Charges')    
         cy.get(':nth-child(21) > h3')
             .contains('Local Per Minutes Charges')
             .should('be.visible')
@@ -103,6 +104,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
             .and('have.css', 'font-size', '18px');
         
+    cy.log('Field - International Per Minutes Charges')   
         cy.get(':nth-child(26) > h3')
         .contains('International Per Minutes Charges')
             .should('be.visible')
@@ -110,6 +112,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
             .and('have.css', 'font-size', '18px');
         
+    cy.log('Field - SMS Per Charges')
         cy.get(':nth-child(31) > h3')
         .contains('SMS Per Charges')
             .should('be.visible')
@@ -119,7 +122,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
 });
         
     it('Checks input fields with placeholders', () => {
-        
+        cy.log('Placeholder - Monthly Rental') 
             cy.get('#rental1')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Monthly Rental')
@@ -127,37 +130,43 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
                 // onkeyup - js or f to execut ewhen a user releases a key on the keyboard after pressing it
                 .and('have.attr', 'onblur', 'validateno();');
                 // onblur - js or f to execute when an element loses focus
-        
+                
+        cy.log('Placeholder - Free Local Minutes') 
             cy.get('#local_minutes')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Free Local Minutes')
                 .and('have.attr', 'onkeyup', 'validateno1();')
                 .and('have.attr', 'onblur', 'validateno1();');
         
+        cy.log('Placeholder - Free International Minutes') 
             cy.get('#inter_minutes')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Free International Minutes')
                 .and('have.attr', 'onkeyup', 'validateno2();')
                 .and('have.attr', 'onblur', 'validateno2();');
         
+        cy.log('Placeholder - Free SMS Pack') 
             cy.get('#sms_pack')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Free SMS Pack')
                 .and('have.attr', 'onkeyup', 'validateno3();')
                 .and('have.attr', 'onblur', 'validateno3();');
         
+        cy.log('Placeholder - Local Per Minutes Charges') 
             cy.get('#minutes_charges')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Local Per Minutes Charges')
                 .and('have.attr', 'onkeyup', 'validateno4();')
                 .and('have.attr', 'onblur', 'validateno4();');
         
+        cy.log('Placeholder - Inter. Per Minutes Charges') 
             cy.get('#inter_charges')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Inter. Per Minutes Charges')
                 .and('have.attr', 'onkeyup', 'validateno5();')
                 .and('have.attr', 'onblur', 'validateno5();');
-        
+                
+        cy.log('Placeholder - SMS Per Charges') 
             cy.get('#sms_charges')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'SMS Per Charges')
@@ -196,7 +205,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
                 
     });
     
-    it('Cheks the Submit button Appearamce', () => {
+    it('Checks the Submit button Appearamce', () => {
         cy.get(':nth-child(1) > input')
         .should('be.visible')
         .and('contain', 'submit')
@@ -205,7 +214,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
         
     });
     
-    it('Cheks the Reset button Appearamce', () => {
+    it('Checks the Reset button Appearamce', () => {
         cy.get('.alt')
         .should('be.visible')
         .and('have.value', 'Reset')

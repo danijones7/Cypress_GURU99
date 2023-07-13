@@ -39,7 +39,8 @@ describe('Agile Project', () => {
             .and('be.enabled')
 
         cy.url()
-            .should('be.equal', 'https://demo.guru99.com/Agile_Project/Agi_V1/customer/Customerhomepage.php')
+            .should('be.equal',
+                'https://demo.guru99.com/Agile_Project/Agi_V1/customer/Customerhomepage.php')
 
         cy.log('Welcome text css is as needed')
         cy.get('.heading3')
@@ -92,6 +93,10 @@ describe('Agile Project', () => {
         cy.get(':nth-child(2) > :nth-child(2) > input')
             .type('Guru99')
         cy.get('[type="reset"]').click()
+        cy.get(':nth-child(1) > :nth-child(2) > input')
+            .should('have.value', '')
+        cy.get(':nth-child(2) > :nth-child(2) > input')
+            .should('have.value', '')
         // cy.get('[type="submit"]').click() //  не отловить алерт 
 
     })
@@ -102,7 +107,8 @@ describe('Agile Project', () => {
         cy.get(':nth-child(2) > :nth-child(2) > input')
             .type('Guru99')
         cy.get('[type="submit"]').click()
-        // cy.get('.nav > :nth-child(8) > a').click()   // так лучше из cypress не копировать, непонтно потом 
+        // cy.get('.nav > :nth-child(8) > a').click()   
+        // так лучше из cypress не копировать, непонтно потом
         cy.contains('Insurance Project').click()
         cy.url('https://demo.guru99.com/insurance/v1/index.php')
         cy.contains('Agile Project').click()
@@ -129,13 +135,5 @@ describe('Agile Project', () => {
 });
 
     //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
-    //         .and('have.css', '', '')
+
 

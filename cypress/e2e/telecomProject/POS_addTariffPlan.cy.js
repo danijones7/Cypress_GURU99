@@ -14,13 +14,13 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         cy.visit('https://demo.guru99.com/telecom/addtariffplans.php');
     });
 
-it('Cheks the input of MAX Data', () => {
-    cy.log('Fill all the fields with MAX data')
+it('Checks the input of MAX Data', () => {
+cy.log('Fill all the fields with MAX data')
     cy.FillTariffPlan(data.max)
-    cy.log('Click Submit button')
+cy.log('Click Submit button')
     cy.get(':nth-child(1) > input').click()
     cy.url().should('eq', 'https://demo.guru99.com/telecom/addtariffplans.php')
-    cy.log('Check the message')
+cy.log('Check the message')
     cy.get('h2')
         .should('contain', 'Congratulation you add Tariff Plan')
         .and('have.css', 'text-align', 'center')
@@ -30,12 +30,12 @@ it('Cheks the input of MAX Data', () => {
 });
     
 it('Cheks the input of MIN Data', () => {
-    cy.log('Fill all the fields with MAX data')
+cy.log('Fill all the fields with MIN data')
     cy.FillTariffPlan(data.min)
-    cy.log('Click Submit button')
+cy.log('Click Submit button')
     cy.get(':nth-child(1) > input').click()
     cy.url().should('eq', 'https://demo.guru99.com/telecom/addtariffplans.php')
-    cy.log('Check the message')
+cy.log('Check the message')
     cy.get('h2')
         .should('contain', 'Congratulation you add Tariff Plan')
         .and('have.css', 'text-align', 'center')
@@ -44,12 +44,12 @@ it('Cheks the input of MIN Data', () => {
 });
     
 it('Cheks the input of NOM Data', () => {
-    cy.log('Fill all the fields with MAX data')
+cy.log('Fill all the fields with NOM data')
     cy.FillTariffPlan(data.nom)
-    cy.log('Click Submit button')
+cy.log('Click Submit button')
     cy.get(':nth-child(1) > input').click()
     cy.url().should('eq', 'https://demo.guru99.com/telecom/addtariffplans.php')
-    cy.log('Check the message')
+cy.log('Check the message')
     cy.get('h2')
         .should('contain', 'Congratulation you add Tariff Plan')
         .and('have.css', 'text-align', 'center')

@@ -10,3 +10,30 @@ Cypress.Commands.add('FillTariffPlan', (input) => {
     cy.fillTheData(data.objects.SMSPerCharges, input.SMSPerCharges)
 
 });
+
+Cypress.Commands.add('CheckErrorMessage', (object, message, color) => {
+    cy.get(object)
+        .should('be.visible')
+        .and('contain', message)
+        .and('have.css', 'color', color)
+});
+
+Cypress.Commands.add("popUpErrorCheck", (stub) => {
+    const firstCall = stub.getCall(0);
+    const expectedArgument = "please fill all fields Correct Value";
+
+    expect(firstCall).to.be.calledWith(expectedArgument);
+});
+
+Cypress.Commands.add("submitClick", () => {
+    const stub = cy.stub();
+
+    cy.on("window:alert", stub);
+
+    cy.get('input[value="submit"]').scrollIntoView().click();
+
+    return cy.wrap(stub);
+});
+
+
+    //
