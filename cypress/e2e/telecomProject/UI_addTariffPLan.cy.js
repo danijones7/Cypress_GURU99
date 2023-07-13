@@ -13,7 +13,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
     });
 
 
-        it('Checks the Logo appearance', () => {
+    it('Checks the Logo appearance', () => {
             cy.get('.left > .logo')
                 .should('contain', 'Guru99 telecom')
                 .and('be.visible')
@@ -21,12 +21,12 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
                 .and('have.css', 'color', 'rgb(246, 117, 94)')
                 .and('have.css', 'text-align', 'left')
         });
-        it('checks Logo URL', () => {
+    it('checks Logo URL', () => {
             cy.get('.left > .logo').click()
             cy.url().should('eq', 'https://demo.guru99.com/telecom/index.html')
         });
 
-    it('Cheks left Menu', () => {
+    it('Checks left Menu', () => {
             cy.get('.left > [href="#menu"]')
             .should('be.visible')
             .click()
@@ -118,7 +118,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
             .and('have.css', 'font-size', '18px');
 });
         
-        it('Checks input fields with placeholders', () => {
+    it('Checks input fields with placeholders', () => {
         
             cy.get('#rental1')
                 .should('be.visible')
@@ -195,13 +195,26 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
             .and('have.css', 'color', 'rgb(114, 122, 130)');
                 
     });
-    // it('', () => {
-        
-// });
+    
+    it('Cheks the Submit button Appearamce', () => {
         cy.get(':nth-child(1) > input')
+        .should('be.visible')
+        .and('contain', 'submit')
+            .and('have.css', 'background-color', 'rgb(246, 117, 94)')
+            .and('have.css', 'color', 'rgb(255, 255, 255)')
         
-
+    });
+    
+    it('Cheks the Reset button Appearamce', () => {
+        cy.get('.alt')
+        .should('be.visible')
+        .and('have.value', 'Reset')
+            .and('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
+            .and('have.css', 'color', 'rgb(114, 122, 130)')
+            
         
+});
+    
 });
 
 

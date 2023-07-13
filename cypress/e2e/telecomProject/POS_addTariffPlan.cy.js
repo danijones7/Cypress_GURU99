@@ -1,12 +1,4 @@
 const data = require('../../fixtures/dataAddRariffPlan.json')
-const name = ['monthlyRental',
-    'freeLocalMinutes',
-    'freeInternationalMinutes',
-    'freeSMSPack',
-    'localPerMinutesCharges',
-    'internationalPerMinutesCharges',
-    'SMSPerCharges']
-
 
 describe('Cheks Add Tariff Plan with Valid Data', () => {
     beforeEach(() => {
