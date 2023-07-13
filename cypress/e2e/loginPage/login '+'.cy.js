@@ -27,7 +27,7 @@ describe('Agile Project', () => {
             .should('be.visible')
             .and('contain', 'Password')
 
-        cy.get(':nth-child(1) > :nth-child(2) > input')
+        cy.get(':nth-child(1) > :nth-child(2) > input') // userid
             .type('1303')
         cy.get(':nth-child(2) > :nth-child(2) > input')
             .type('Guru99')
