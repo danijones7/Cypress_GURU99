@@ -21,7 +21,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
                 .and('have.css', 'color', 'rgb(246, 117, 94)')
                 .and('have.css', 'text-align', 'left')
         });
-    it('checks Logo URL', () => {
+    it('Checks Logo URL', () => {
             cy.get('.left > .logo').click()
             cy.url().should('eq', 'https://demo.guru99.com/telecom/index.html')
         });
@@ -127,8 +127,9 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Monthly Rental')
                 .and('have.attr', 'onkeyup', 'validateno();')
-                // onkeyup - js or f to execut ewhen a user releases a key on the keyboard after pressing it
-                .and('have.attr', 'onblur', 'validateno();');
+                // onkeyup - js or f to execute ewhen a user releases a key on the keyboard after pressing it
+                .and('have.attr', 'onblur', 'validateno();')
+                .and('have.attr','maxlength','5');
                 // onblur - js or f to execute when an element loses focus
                 
         cy.log('Placeholder - Free Local Minutes') 
@@ -136,42 +137,47 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Free Local Minutes')
                 .and('have.attr', 'onkeyup', 'validateno1();')
-                .and('have.attr', 'onblur', 'validateno1();');
+                .and('have.attr', 'onblur', 'validateno1();')
+                .and('have.attr','maxlength','5');
         
         cy.log('Placeholder - Free International Minutes') 
             cy.get('#inter_minutes')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Free International Minutes')
                 .and('have.attr', 'onkeyup', 'validateno2();')
-                .and('have.attr', 'onblur', 'validateno2();');
+                .and('have.attr', 'onblur', 'validateno2();')
+                .and('have.attr','maxlength','5');
         
         cy.log('Placeholder - Free SMS Pack') 
             cy.get('#sms_pack')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Free SMS Pack')
                 .and('have.attr', 'onkeyup', 'validateno3();')
-                .and('have.attr', 'onblur', 'validateno3();');
+                .and('have.attr', 'onblur', 'validateno3();').and('have.attr','maxlength','5');
         
         cy.log('Placeholder - Local Per Minutes Charges') 
             cy.get('#minutes_charges')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Local Per Minutes Charges')
                 .and('have.attr', 'onkeyup', 'validateno4();')
-                .and('have.attr', 'onblur', 'validateno4();');
+                .and('have.attr', 'onblur', 'validateno4();')
+                .and('have.attr','maxlength','3');
         
         cy.log('Placeholder - Inter. Per Minutes Charges') 
             cy.get('#inter_charges')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'Inter. Per Minutes Charges')
                 .and('have.attr', 'onkeyup', 'validateno5();')
-                .and('have.attr', 'onblur', 'validateno5();');
+                .and('have.attr', 'onblur', 'validateno5();')
+                .and('have.attr','maxlength','3');
                 
         cy.log('Placeholder - SMS Per Charges') 
             cy.get('#sms_charges')
                 .should('be.visible')
                 .should('have.attr', 'placeholder', 'SMS Per Charges')
                 .and('have.attr', 'onkeyup', 'validateno6();')
-                .and('have.attr', 'onblur', 'validateno6();');
+                .and('have.attr', 'onblur', 'validateno6();')
+                .and('have.attr','maxlength','3');
           
         });
     it('Cheks the error messages not to be visible', () => {

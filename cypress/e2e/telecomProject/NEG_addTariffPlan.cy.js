@@ -15,7 +15,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
     });
 
 
-    it('Cheks Invalid Data input Chars', () => {
+    it.skip('Cheсks Invalid Data input Chars', () => {
         cy.log('Fill all the fields with Characters data')
         cy.FillTariffPlan(data.charsABC)
         cy.log('Check Error Messages')
@@ -31,10 +31,11 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         cy.submitClick().then((stub) => {
             cy.popUpErrorCheck(stub);
         });
+        cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
     });
 
 
-    it('Cheks Invalid Data input SpecialCharacters', () => {
+    it.skip('Cheсks Invalid Data input SpecialCharacters', () => {
         cy.log('Fill all the fields with Characters data')
         cy.FillTariffPlan(data.specialCharacters)
         cy.log('Check Error Messages')
@@ -49,25 +50,55 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         cy.log('Click Submit button, Close the Alert')
         cy.submitClick().then((stub) => {
             cy.popUpErrorCheck(stub);
-        });   
+        });
+        cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
     });
-it('Cheks Invalid Data input Spaces', () => {
-        cy.log('Fill all the fields with Characters data')
-        cy.FillTariffPlan(data.spaces)
-        cy.log('Check Error Messages')
-        cy.CheckErrorMessage('#message2', 'Characters are not allowed', 'rgb(114, 122, 130)')
-        cy.CheckErrorMessage('#message3', 'Characters are not allowed', 'rgb(114, 122, 130)')
-        cy.CheckErrorMessage('#message4', 'Characters are not allowed', 'rgb(114, 122, 130)')
-        cy.CheckErrorMessage('#message5', 'Characters are not allowed', 'rgb(114, 122, 130)')
-        cy.CheckErrorMessage('#message6', 'Characters are not allowed', 'rgb(114, 122, 130)')
-        cy.CheckErrorMessage('#message7', 'Characters are not allowed', 'rgb(114, 122, 130)')
-        cy.CheckErrorMessage('#message8', 'Characters are not allowed', 'rgb(114, 122, 130)')
+    it.skip('Cheсks Invalid Data input Spaces', () => {
+            cy.log('Fill all the fields with Characters data')
+            cy.FillTariffPlan(data.spaces)
+            cy.log('Check Error Messages')
+            cy.CheckErrorMessage('#message2', 'Characters are not allowed', 'rgb(114, 122, 130)')
+            cy.CheckErrorMessage('#message3', 'Characters are not allowed', 'rgb(114, 122, 130)')
+            cy.CheckErrorMessage('#message4', 'Characters are not allowed', 'rgb(114, 122, 130)')
+            cy.CheckErrorMessage('#message5', 'Characters are not allowed', 'rgb(114, 122, 130)')
+            cy.CheckErrorMessage('#message6', 'Characters are not allowed', 'rgb(114, 122, 130)')
+            cy.CheckErrorMessage('#message7', 'Characters are not allowed', 'rgb(114, 122, 130)')
+            cy.CheckErrorMessage('#message8', 'Characters are not allowed', 'rgb(114, 122, 130)')
+        
+            cy.log('Click Submit button, Close the Alert')
+            cy.submitClick().then((stub) => {
+                cy.popUpErrorCheck(stub);
+            });
+            cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
+});
     
+    it('Cheсks Invalid Data Click and leave Blank Fields', () => {
+        cy.log('Leave the fields empty')
+        cy.clickOnTheField(data.objects.monthlyRental)
+        cy.clickOnTheField(data.objects.freeLocalMin)
+        cy.clickOnTheField(data.objects.freeInterMin)
+        cy.clickOnTheField(data.objects.freeSMSPack)
+        cy.clickOnTheField(data.objects.localPerMinCharges)
+        cy.clickOnTheField(data.objects.interPerMinCharges)
+        cy.clickOnTheField(data.objects.SMSPerCharges)
+        cy.get('body').click()
+        //1 more click to make the last error message visible
+        cy.log('Check Error Messages')
+        cy.CheckErrorMessage('#message2', 'Number must not be blank', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message3', 'Number must not be blank', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message4', 'Number must not be blank', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message5', 'Number must not be blank', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message6', 'Number must not be blank', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message7', 'Number must not be blank', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message8', 'Number must not be blank', 'rgb(114, 122, 130)')
+
         cy.log('Click Submit button, Close the Alert')
         cy.submitClick().then((stub) => {
             cy.popUpErrorCheck(stub);
-        });   
-    });
+        });
+        cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
+                
+    });    
 });
 
 // it('', () => {

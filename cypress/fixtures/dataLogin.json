@@ -1,0 +1,12 @@
+{
+    "users": {
+        "admin": {
+            "name": 1303,
+            "password": "Guru99"
+        },
+        "invalid": {
+            "name": "incorrect",
+            "password": "incorrect"
+        }
+    }
+}

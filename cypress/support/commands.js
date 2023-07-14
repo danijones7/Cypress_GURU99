@@ -30,5 +30,23 @@ Cypress.Commands.add('fillTheData', (object, data) => {
         .type(data)
 });
 
-import "./CommandsTariffPlan";
+Cypress.Commands.add('clickOnTheField', (object) => {
+    cy.get(object).click()
+});
 
+Cypress.Commands.add('checkTheFieldIsClear', (object) => {
+    cy.get(object)
+        .should('have.value', '')
+});
+
+Cypress.Commands.add('CheckErrorMessage', (object, message, color) => {
+    cy.get(object)
+        .should('be.visible')
+        .and('contain', message)
+        .and('have.css', 'color', color)
+});
+
+
+
+
+import "./CommandsTariffPlan";

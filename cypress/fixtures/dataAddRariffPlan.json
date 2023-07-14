@@ -45,13 +45,13 @@
     "SMSPerCharges": 1000
   },
   "specialCharacters": {
-    "monthlyRental": ">~}=.",
-    "freeLocalMin": "~=(``",
-    "freeInterMin": "-;)|%",
-    "freeSMSPack": ")?+=}",
-    "localPerMinCharges": "%`^",
-    "interPerMinCharges": "+=-",
-    "SMSPerCharges": "/>."
+    "monthlyRental": "=-,)]",
+    "freeLocalMin": "|<[\\-",
+    "freeInterMin": "\\|`-=",
+    "freeSMSPack": "`+>./",
+    "localPerMinCharges": ",~!",
+    "interPerMinCharges": ",%)",
+    "SMSPerCharges": "{,)"
   },
   "charsABC": {
     "monthlyRental": "abcde",
@@ -70,5 +70,14 @@
     "localPerMinCharges": "   ",
     "interPerMinCharges": "   ",
     "SMSPerCharges": "   "
+  },
+  "blankFields": {
+    "monthlyRental": "",
+    "freeLocalMin": "",
+    "freeInterMin": "",
+    "freeSMSPack": "",
+    "localPerMinCharges": "",
+    "interPerMinCharges": "",
+    "SMSPerCharges": ""
   }
 }

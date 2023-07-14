@@ -11,12 +11,6 @@ Cypress.Commands.add('FillTariffPlan', (input) => {
 
 });
 
-Cypress.Commands.add('CheckErrorMessage', (object, message, color) => {
-    cy.get(object)
-        .should('be.visible')
-        .and('contain', message)
-        .and('have.css', 'color', color)
-});
 
 Cypress.Commands.add("popUpErrorCheck", (stub) => {
     const firstCall = stub.getCall(0);
