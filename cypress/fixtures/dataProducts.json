@@ -1,0 +1,18 @@
+{
+    "products": {
+        "product": {
+            "name": "Mother Elephant With Babies Soft Toy",
+            "image": "images/Toy.jpg",
+            "description": "Delight your little ones this year by presenting them with an adorable soft toy Mother Elephant With Babies Soft Toy - 38 cm. This soft toy into their bedroom will give them endless hours of fun-filled playtime. Crafted with perfection using the finest materials, Non-toxic and soft fabric Soft and Cuddly filling Home Washable Huggable and loveable for someone special ",
+            "characteristics": {
+                "1": "Brand : ToysMart",
+                "2": "Age group : 2 Years to 4 Years",
+                "3": "Color : Grey",
+                "4": "Washable : Yes",
+                "5": "Key Feature 1 : Soft and Cuddly Filling",
+                "6": "SUPC: SDL318766798"
+            },
+            "price": "Price: $20"
+        }
+    }
+}

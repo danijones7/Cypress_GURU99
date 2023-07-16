@@ -1,0 +1,61 @@
+{
+    "validCards": {
+        "visa": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        },
+        "masterCard": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        },
+        "americanExpress": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        },
+        "discover": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        }
+    },
+    "inValidCards": {
+        "visa": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        },
+        "masterCard": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        },
+        "americanExpress": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        },
+        "discover": {
+            "cardNumber": " ",
+            "expMonth": "",
+            "expYear": "",
+            "cvv": ""
+        }
+    },
+    "errorMessages": {
+        "chars": "Characters are not allowed",
+        "specChars": "Special characters are not allowed",
+        "card": "Please Input Correct 16 Digit.",
+        "cvv": "Please Input Correct 3 Digit CVV.",
+        "blank": "Field must not be blank"
+    }
+}
