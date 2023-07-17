@@ -1,6 +1,6 @@
 const data = require('../../fixtures/dataProducts.json')
 
-describe('Cheks Add Tariff Plan with Valid Data', () => {
+describe('Cheks UI of the Product Page', () => {
     beforeEach(() => {
         cy.fixture("cookies.json").then((cookies) => {
             cookies.forEach((cookie) => {
@@ -87,7 +87,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
     });
 
     it.skip('Ckecks Dropdown', () => {
-        for (var i = 1; (i < 9); i++) {
+        for (var i = 1; (i < 10); i++) {
            i = i.toString()
                 cy.get('select[name="quantity"]')
                     .select(i)

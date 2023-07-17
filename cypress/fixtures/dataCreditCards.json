@@ -1,61 +1,73 @@
 {
     "validCards": {
         "visa": {
-            "cardNumber": " ",
-            "expMonth": "",
-            "expYear": "",
-            "cvv": ""
+            "cardNumber": "4004696019763666",
+            "expMonth": "12",
+            "expYear": "2026",
+            "cvv": "392"
         },
         "masterCard": {
-            "cardNumber": " ",
-            "expMonth": "",
-            "expYear": "",
-            "cvv": ""
+            "cardNumber": "5534227103864180",
+            "expMonth": "10",
+            "expYear": "2025",
+            "cvv": "422"
         },
         "americanExpress": {
-            "cardNumber": " ",
-            "expMonth": "",
-            "expYear": "",
-            "cvv": ""
+            "cardNumber": "345877441348534",
+            "expMonth": "10",
+            "expYear": "2024",
+            "cvv": "8302"
         },
         "discover": {
-            "cardNumber": " ",
-            "expMonth": "",
-            "expYear": "",
-            "cvv": ""
+            "cardNumber": "6509201124801744",
+            "expMonth": "04",
+            "expYear": "2025",
+            "cvv": "959"
         }
     },
     "inValidCards": {
-        "visa": {
-            "cardNumber": " ",
+        "specChars": {
+            "cardNumber": "?/.^%$#@!^&*()|~",
             "expMonth": "",
             "expYear": "",
-            "cvv": ""
+            "cvv": "?.@"
         },
-        "masterCard": {
-            "cardNumber": " ",
+        "chars": {
+            "cardNumber": "aBcdeFgHIjkLMNOP",
             "expMonth": "",
             "expYear": "",
-            "cvv": ""
+            "cvv": "ABc"
         },
-        "americanExpress": {
-            "cardNumber": " ",
-            "expMonth": "",
-            "expYear": "",
-            "cvv": ""
+        "0": {
+            "cardNumber": "0",
+            "cvv": "0"
         },
-        "discover": {
-            "cardNumber": " ",
+        "max1": {
+            "cardNumber": "17171717171717171",
+            "cvv": "55555"
+        },
+        "min1": {
+            "cardNumber": "14141414141414",
+            "cardNumber1_digit": "2",
+            "cvv": "22",
+            "cvv1_digit": "1"
+        },
+        "expData": {
+            "expMonth": "06",
+            "expYear": "2023"
+        },
+        "spacesWithNumbers": {
+            "cardNumber": "    12345978    ",
             "expMonth": "",
             "expYear": "",
-            "cvv": ""
+            "cvv": " 1 "
         }
     },
     "errorMessages": {
         "chars": "Characters are not allowed",
         "specChars": "Special characters are not allowed",
+        "blank": "Field must not be blank",
         "card": "Please Input Correct 16 Digit.",
-        "cvv": "Please Input Correct 3 Digit CVV.",
-        "blank": "Field must not be blank"
+        "cvv": "Please Input Correct 3 Digit CVV."
     }
 }
