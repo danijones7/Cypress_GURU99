@@ -143,7 +143,11 @@ describe('Cheks Payment Process with Valid Data', () => {
         cy.log(quantity)
         const paymentAmount = (parseFloat(quantity) * 20).toFixed(2).replace(',', '.');
         cy.log(paymentAmount) 
-        cy.fillCreditCard(data.validCards.visa.cardNumber, data.validCards.visa.expMonth, data.validCards.visa.expYear, data.validCards.visa.cvv)
+        cy.fillCreditCard(
+            data.validCards.visa.cardNumber,
+            data.validCards.visa.expMonth,
+            data.validCards.visa.expYear,
+            data.validCards.visa.cvv)
         cy.get('input[type="submit"]')
             .should('have.attr', 'value', `Pay $${paymentAmount}`).click();
         cy.url()

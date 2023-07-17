@@ -114,7 +114,7 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
         
     cy.log('Field - SMS Per Charges')
         cy.get(':nth-child(31) > h3')
-        .contains('SMS Per Charges')
+            .should('contain','SMS Per Charges')
             .should('be.visible')
             .and('have.css', 'color', 'rgb(37, 162, 195)')
             .and('have.css', 'font-family', 'Montserrat, sans-serif')
@@ -224,11 +224,11 @@ describe('Cheks the UI of Add Tariff Plan Page', () => {
         cy.get('.alt')
         .should('be.visible')
         .and('have.value', 'Reset')
-            .and('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
-            .and('have.css', 'color', 'rgb(114, 122, 130)')
+        .and('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
+        .and('have.css', 'color', 'rgb(114, 122, 130)')
             
         
-});
+    });
     
 });
 

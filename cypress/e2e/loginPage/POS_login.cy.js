@@ -142,7 +142,7 @@ describe('Agile Project Login with Valid Data', () => {
 
     });
 
-    it.skip('Enter valid user_id and a few spaces afterwards, enter correct password. Click Login ', () => {
+    it('Enter valid user_id and a few spaces afterwards, enter correct password. Click Login ', () => {
         cy.get(':nth-child(1) > :nth-child(2) > input') // userid
             .type(`${data.users.admin.name}    `)
         //this one goes okay

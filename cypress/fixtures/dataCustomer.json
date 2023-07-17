@@ -1,0 +1,69 @@
+{
+    "objects": {
+        "firstName": "#fname",
+        "lastName": "#lname",
+        "email": "#email",
+        "address": ":nth-child(7) > #message",
+        "mobileNumber": "#telephoneno"
+    },
+    "max": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "mobileNumber": ""
+    },
+    "min": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "mobileNumber": ""
+    },
+    "nom": {
+        "firstName": "Daniel",
+        "lastName": "Jones",
+        "email": "daniel.jones@gmail.com",
+        "address": "Estonia Tallinn Viru 10 apt 10",
+        "mobileNumber": "37257409549"
+    },
+    "maxPlus1": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "mobileNumber": ""
+    },
+    "specialCharacters": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "mobileNumber": ""
+    },
+    "charsABC": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "mobileNumber": ""
+    },
+    "spaces": {
+        "firstName": "   Daniel",
+        "lastName": "   Jones",
+        "email": "   daniel.jones@gmail.com",
+        "address": "   Estonia Tallinn Viru 10 apt 10",
+        "mobileNumber": "   37257409549"
+    },
+    "errorMessages": {
+        "spaceFirst": "First character can not have space",
+        "nameBlank": "Customer name must not be blank",
+        "emailBlank": "Email-ID must not be blank",
+        "addressBlank": "Address Field must not be blank",
+        "mobileNumberBlank": "Mobile no must not be blank",
+        "specChars": "Special characters are not allowed",
+        "blank": "Field must not be blank",
+        "card": "Please Input Correct 16 Digit.",
+        "cvv": "Please Input Correct 3 Digit CVV."
+    }
+}

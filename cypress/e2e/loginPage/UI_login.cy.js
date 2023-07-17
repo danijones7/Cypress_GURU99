@@ -42,7 +42,7 @@ describe('UI of the page Agile Project', () => {
         cy.get(':nth-child(2) > :nth-child(2) > input')
             .should('be.visible')
             .and('have.attr', 'type', 'password');  
-        //cheks entered symbils in the field will be hidden
+        //checks entered symbols in the field will be hidden
     });
 
     it.skip('Checks Login btn', () => {
@@ -82,10 +82,6 @@ describe('UI of the page Agile Project', () => {
             .and('not.be.visible')
                 
     });
-
-    
-    
-
 
 });
 

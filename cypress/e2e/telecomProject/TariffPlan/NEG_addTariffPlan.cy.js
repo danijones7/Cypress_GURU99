@@ -1,4 +1,4 @@
-const data = require('../../fixtures/dataAddRariffPlan.json')
+const data = require('../../../fixtures/dataAddRariffPlan.json')
 
 describe('Cheks Add Tariff Plan with Valid Data', () => {
     beforeEach(() => {
@@ -15,7 +15,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
     });
 
 
-    it.skip('Cheсks Invalid Data input Chars', () => {
+    it('Cheсks Invalid Data input Chars', () => {
         cy.log('Fill all the fields with Characters data')
         cy.FillTariffPlan(data.charsABC)
         cy.log('Check Error Messages')
@@ -35,7 +35,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
     });
 
 
-    it.skip('Cheсks Invalid Data input SpecialCharacters', () => {
+    it('Cheсks Invalid Data input SpecialCharacters', () => {
         cy.log('Fill all the fields with Characters data')
         cy.FillTariffPlan(data.specialCharacters)
         cy.log('Check Error Messages')
@@ -53,7 +53,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         });
         cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
     });
-    it.skip('Cheсks Invalid Data input Spaces', () => {
+    it('Cheсks Invalid Data input Spaces', () => {
             cy.log('Fill all the fields with Characters data')
             cy.FillTariffPlan(data.spaces)
             cy.log('Check Error Messages')

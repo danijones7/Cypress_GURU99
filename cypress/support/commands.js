@@ -50,4 +50,5 @@ Cypress.Commands.add('CheckErrorMessage', (object, message, color) => {
 
 
 import "./CommandsTariffPlan";
-import "./Payment"
+import "./CommandsCustomer";
+import "./Payment";

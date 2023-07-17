@@ -1,4 +1,4 @@
-const data = require('../../fixtures/dataAddRariffPlan.json')
+const data = require('../../../fixtures/dataAddRariffPlan.json')
 
 describe('Cheks Add Tariff Plan with Valid Data', () => {
     beforeEach(() => {
@@ -14,7 +14,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         cy.visit('https://demo.guru99.com/telecom/addtariffplans.php');
     });
 
-    it.skip('Checks the input of MAX Data', () => {
+    it('Checks the input of MAX Data', () => {
     cy.log('Fill all the fields with MAX data')
         cy.FillTariffPlan(data.max)
     cy.log('Click Submit button')
@@ -38,7 +38,7 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         
     });
     
-    it.skip('Cheks the input of MIN Data', () => {
+    it('Cheks the input of MIN Data', () => {
     cy.log('Fill all the fields with MIN data')
         cy.FillTariffPlan(data.min)
     cy.log('Click Submit button')
