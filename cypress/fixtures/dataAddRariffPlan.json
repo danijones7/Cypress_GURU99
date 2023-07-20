@@ -44,6 +44,15 @@
     "interPerMinCharges": 1000,
     "SMSPerCharges": 1000
   },
+  "minMinus1": {
+    "monthlyRental": -1,
+    "freeLocalMin": -1,
+    "freeInterMin": -1,
+    "freeSMSPack": -1,
+    "localPerMinCharges": -1,
+    "interPerMinCharges": -1,
+    "SMSPerCharges": -1
+  },
   "specialCharacters": {
     "monthlyRental": "=-,)]",
     "freeLocalMin": "|<[\\-",

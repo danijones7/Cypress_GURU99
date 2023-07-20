@@ -7,6 +7,14 @@
         "invalid": {
             "name": "incorrect",
             "password": "incorrect"
+        },
+        "spacesBefore": {
+            "name": "  1303",
+            "password": "  Guru99"
+        },
+        "spacesAfter": {
+            "name": "1303  ",
+            "password": "Guru99  "
         }
     }
 }

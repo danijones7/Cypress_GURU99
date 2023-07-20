@@ -14,7 +14,7 @@ describe('Cheks UI of the Product Page', () => {
         cy.visit('https://demo.guru99.com/payment-gateway/index.php');
     });
 
-    it.skip('Ckecks Header', () => {
+    it('Ckecks Header', () => {
     cy.log('Chekcs Header color and visibility')
         cy.get('#header')
         .should('be.visible')
@@ -40,7 +40,7 @@ describe('Cheks UI of the Product Page', () => {
             
     });
 
-    it.skip('Ckecks Product Name', () => {
+    it('Ckecks Product Name', () => {
         cy.get('h2')
             .should('be.visible')
             .and('contain', data.products.product.name)
@@ -50,14 +50,14 @@ describe('Cheks UI of the Product Page', () => {
             .and('have.css', 'color', 'rgb(85, 85, 85)')        
     });
 
-    it.skip('Ckecks Product Image', () => {
+    it('Ckecks Product Image', () => {
         cy.get('p > img')
             .should('be.visible')
             .and('have.attr', 'src', data.products.product.image)
                             
     });
 
-    it.skip('Ckecks Product Description', () => {
+    it('Ckecks Product Description', () => {
         cy.get(':nth-child(2) > p')
             .should('be.visible')
             .and('contain', data.products.product.description)
@@ -78,7 +78,7 @@ describe('Cheks UI of the Product Page', () => {
             .and('have.css', 'font-family', '"Source Sans Pro", Arial, Helvetica, sans-serif')
             .and('have.css', 'color', 'rgb(154, 154, 154)')        
     });
-    it.skip('Ckecks Product Price', () => {
+    it('Ckecks Product Price', () => {
         cy.get('h3')
             .should('be.visible')
             .and('contain', data.products.product.price)
@@ -86,7 +86,7 @@ describe('Cheks UI of the Product Page', () => {
             .and('have.css', 'color', 'rgb(85, 85, 85)')        
     });
 
-    it.skip('Ckecks Dropdown', () => {
+    it('Ckecks Dropdown', () => {
         for (var i = 1; (i < 10); i++) {
            i = i.toString()
                 cy.get('select[name="quantity"]')

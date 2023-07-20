@@ -58,8 +58,4 @@ describe('Cheks the UI of Add Customer Page', () => {
 
     });
 
-
-
-
-
 });

@@ -87,6 +87,54 @@ describe('Agile Project Login with Invalid Data', () => {
         cy.url().should('eq', 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
     });
 
+    it.skip('Enter a few spaces first and valid user_id after in the UserId field and correct password in Password field', () => {
+        cy.get(':nth-child(1) > :nth-child(2) > input') // userid
+            .type(data.users.spacesBefore.name)
+        cy.get(':nth-child(2) > :nth-child(2) > input') //password
+            .type(data.users.admin.password)
+        cy.log('Click Login')
+        // cant catch the alert - bug (though login is fine)
+        cy.get('[type="submit"]').click()
+        cy.on('window:confirm', () => true);
+        cy.url().should('eq', 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+    });
+
+    it.skip('Enter valid user_id and a few spaces after in the UserId field and correct password', () => {
+        cy.get(':nth-child(1) > :nth-child(2) > input') // userid
+            .type(data.users.spacesAfter.name)
+        cy.get(':nth-child(2) > :nth-child(2) > input') //password
+            .type(data.users.admin.password)
+        cy.log('Click Login')
+        // cant catch the alert - bug (though login is fine)
+        cy.get('[type="submit"]').click()
+        cy.on('window:confirm', () => true);
+        cy.url().should('eq', 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+    });
+
+    it.skip('Enter valid user_id in the UserId field and a few spaces first and correct password after in Password field', () => {
+        cy.get(':nth-child(1) > :nth-child(2) > input') // userid
+            .type(data.users.admin.name)
+        cy.get(':nth-child(2) > :nth-child(2) > input') //password
+            .type(data.users.spacesBefore.password)
+        cy.log('Click Login')
+        // cant catch the alert - bug (though login is fine)
+        cy.get('[type="submit"]').click()
+        cy.on('window:confirm', () => true);
+        cy.url().should('eq', 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+    });
+
+    it.skip('Enter valid user_id in the UserId field and correct password and a fews spaces after in Password field', () => {
+        cy.get(':nth-child(1) > :nth-child(2) > input') // userid
+            .type(data.users.admin.name)
+        cy.get(':nth-child(2) > :nth-child(2) > input') //password
+            .type(data.users.spacesAfter.password)
+        cy.log('Click Login')
+        // cant catch the alert - bug (though login is fine)
+        cy.get('[type="submit"]').click()
+        cy.on('window:confirm', () => true);
+        cy.url().should('eq', 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+    });
+
 
 
 });

@@ -98,7 +98,27 @@ describe('Cheks Add Tariff Plan with Valid Data', () => {
         });
         cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
                 
-    });    
+    });
+
+    it.skip('Cheсks Invalid Data input MIN-1', () => {
+        cy.log('Fill all the fields with MIN-1 data')
+        cy.FillTariffPlan(data.minMinus1)
+        cy.log('Check Error Messages')
+        cy.CheckErrorMessage('#message2', 'Number must not be negative', 'rgb(114, 122, 130)')
+        //BUG - such message doesn't exist in the field 
+        cy.CheckErrorMessage('#message3', 'Number must not be negative', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message4', 'Number must not be negative', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message5', 'Number must not be negative', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message6', 'Number must not be negative', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message7', 'Number must not be negative', 'rgb(114, 122, 130)')
+        cy.CheckErrorMessage('#message8', 'Number must not be negative', 'rgb(114, 122, 130)')
+    //BUG - system successfully adds Tariff Plan with negative Data
+        cy.log('Click Submit button, Close the Alert')
+        cy.submitClick().then((stub) => {
+            cy.popUpErrorCheck(stub);
+        });
+        cy.get('#main').contains('Congratulation you add Tariff Plan').should('not.exist');
+    });
 });
 
 // it('', () => {

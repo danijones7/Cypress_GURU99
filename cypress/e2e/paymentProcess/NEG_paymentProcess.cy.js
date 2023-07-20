@@ -21,7 +21,7 @@ describe('Cheks Payment Process with Valid Data', () => {
         cy.get('.button').click()
 
     });
-    it.skip('Checks the input of SPEC CHARS CreditCard', () => {
+    it('Checks the input of SPEC CHARS CreditCard', () => {
         cy.log('Credit Card with SpecCharsInput')
         cy.fillCreditCard(
             data.inValidCards.specChars.cardNumber,
@@ -130,7 +130,7 @@ describe('Cheks Payment Process with Valid Data', () => {
         cy.get('#message1')
             .should('be.visible')
         //BUG - the message is not shown after typing 2nd digit of the Card 
-            //except: 11-15 inputs
+            //except: 11,12,13,14,15 inputs
             .and('have.css', 'color', 'rgb(85, 85, 85)')
             .and('contain', data.errorMessages.card)
         cy.get('input[type="submit"]').click()
